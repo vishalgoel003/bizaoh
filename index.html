@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accent On Health | Corporate Catering Service</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#aee2f9', /* Matching the card background */
+                            DEFAULT: '#3b82f6',
+                            dark: '#1e3a8a',
+                            accent: '#d92626' /* Red accent from the text */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <nav class="bg-brand-light shadow-md fixed w-full z-10 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <img class="h-16 w-16 rounded-full object-cover border-2 border-white shadow-sm" src="logo.png" alt="Accent On Health Logo" onerror="this.src='https://placehold.co/100x100/aee2f9/1e3a8a?text=AOH'">
+                    <div class="ml-4 flex flex-col justify-center">
+                        <span class="text-2xl font-bold text-brand-dark tracking-wide uppercase">Accent On Health</span>
+                        <span class="text-sm font-semibold text-brand-accent italic">Love to Serve</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-gray-700 hover:text-brand-accent font-medium transition">About Us</a>
+                    <a href="#menu" class="text-gray-700 hover:text-brand-accent font-medium transition">Menu</a>
+                    <a href="#contact" class="bg-brand-accent text-white px-5 py-2 rounded-full font-medium hover:bg-red-700 transition shadow-sm">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="pt-28 pb-16 bg-gradient-to-b from-brand-light to-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-brand-dark mb-6">
+                Premium Office Cafeteria Catering
+            </h1>
+            <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
+                Delivering fresh, hygienic, and delicious meals directly to your workplace in Sector-62 and surrounding areas.
+            </p>
+            <a href="#menu" class="inline-block bg-brand-dark text-white text-lg px-8 py-3 rounded-full hover:bg-blue-900 transition shadow-lg">
+                View Our Menu
+            </a>
+        </div>
+    </div>
+
+    <section id="menu" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-brand-dark mb-12 border-b-2 border-brand-accent pb-2 inline-block relative left-1/2 -translate-x-1/2">Daily Menu Highlights</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="bg-brand-dark text-white py-3 text-center font-bold text-lg">North Indian Thali Basics</div>
+                    <ul class="p-6 space-y-4">
+                        <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                            <span>Paneer Butter Masala</span> <span class="font-semibold text-brand-accent">₹180</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                            <span>Dal Makhani</span> <span class="font-semibold text-brand-accent">₹140</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                            <span>Seasonal Mixed Veg</span> <span class="font-semibold text-brand-accent">₹120</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span>Tandoori Roti / Butter Naan</span> <span class="font-semibold text-brand-accent">₹15 / ₹35</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="bg-green-600 text-white py-3 text-center font-bold text-lg">Healthy Salads</div>
+                    <ul class="p-6 space-y-4">
+                        <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                            <span>Fresh Garden Salad</span> <span class="font-semibold text-brand-accent">₹80</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                            <span>Sprouted Moong & Chana</span> <span class="font-semibold text-brand-accent">₹95</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                            <span>Protein Paneer Salad</span> <span class="font-semibold text-brand-accent">₹120</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span>Fruit Bowl (Seasonal)</span> <span class="font-semibold text-brand-accent">₹110</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="bg-yellow-500 text-white py-3 text-center font-bold text-lg">Quick Bites & Fast Food</div>
+                    <ul class="p-6 space-y-4">
+                        <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                            <span>Aloo Tikki Burger</span> <span class="font-semibold text-brand-accent">₹60</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                            <span>Veg Grilled Sandwich</span> <span class="font-semibold text-brand-accent">₹80</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                            <span>Chilli Paneer Dry</span> <span class="font-semibold text-brand-accent">₹150</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span>Veg Hakka Noodles</span> <span class="font-semibold text-brand-accent">₹110</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <p class="text-center text-gray-500 text-sm mt-8">* Custom corporate meal plans and bulk discounts available on request.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-brand-light rounded-2xl p-8 shadow-inner flex flex-col md:flex-row items-center justify-between">
+                
+                <div class="mb-8 md:mb-0 md:w-1/2">
+                    <h2 class="text-3xl font-bold text-brand-dark mb-4">Get in Touch</h2>
+                    <p class="text-gray-700 mb-6">Ready to upgrade your office cafeteria? Contact Deepak Kumar today to discuss menus, pricing, and daily delivery schedules.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center text-gray-800">
+                            <i class="fa-solid fa-user text-brand-accent w-6"></i>
+                            <span class="font-bold text-lg">Deepak Kumar</span>
+                        </div>
+                        <div class="flex items-center text-gray-800">
+                            <i class="fa-brands fa-whatsapp text-green-600 text-xl w-6"></i>
+                            <a href="https://wa.me/919643797932" class="hover:text-brand-accent transition">9643797932</a>
+                        </div>
+                        <div class="flex items-center text-gray-800">
+                            <i class="fa-solid fa-phone text-brand-accent w-6"></i>
+                            <a href="tel:+918700352657" class="hover:text-brand-accent transition">8700352657</a>
+                        </div>
+                        <div class="flex items-center text-gray-800">
+                            <i class="fa-solid fa-envelope text-brand-accent w-6"></i>
+                            <a href="mailto:deepakkumar964379@gmail.com" class="hover:text-brand-accent transition">deepakkumar964379@gmail.com</a>
+                        </div>
+                        <div class="flex items-center text-gray-800">
+                            <i class="fa-solid fa-location-dot text-brand-accent w-6"></i>
+                            <span>Sector-62, Noida</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:w-1/3 flex justify-center">
+                    <div class="w-48 h-48 bg-white rounded-full flex items-center justify-center shadow-lg border-4 border-brand-accent overflow-hidden">
+                        <i class="fa-solid fa-utensils text-6xl text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-dark text-white py-8 text-center">
+        <p>&copy; 2026 Accent On Health Food Catering Service. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
