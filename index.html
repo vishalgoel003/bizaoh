@@ -12,10 +12,10 @@
                 extend: {
                     colors: {
                         brand: {
-                            light: '#aee2f9', /* Matching the card background */
+                            light: '#aee2f9',
                             DEFAULT: '#3b82f6',
                             dark: '#1e3a8a',
-                            accent: '#d92626' /* Red accent from the text */
+                            accent: '#d92626'
                         }
                     }
                 }
@@ -36,9 +36,12 @@
                     </div>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#about" class="text-gray-700 hover:text-brand-accent font-medium transition">About Us</a>
                     <a href="#menu" class="text-gray-700 hover:text-brand-accent font-medium transition">Menu</a>
-                    <a href="#contact" class="bg-brand-accent text-white px-5 py-2 rounded-full font-medium hover:bg-red-700 transition shadow-sm">Contact Us</a>
+                    <a href="#contact" class="text-gray-700 hover:text-brand-accent font-medium transition">Contact</a>
+                    <button onclick="openOrderModal()" class="bg-green-600 text-white px-5 py-2 rounded-full font-bold hover:bg-green-700 transition shadow-sm flex items-center space-x-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Order Now</span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -50,11 +53,12 @@
                 Premium Office Cafeteria Catering
             </h1>
             <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-                Delivering fresh, hygienic, and delicious meals directly to your workplace in Sector-62 and surrounding areas.
+                Delivering fresh, hygienic, and delicious meals directly to your workplace.
             </p>
-            <a href="#menu" class="inline-block bg-brand-dark text-white text-lg px-8 py-3 rounded-full hover:bg-blue-900 transition shadow-lg">
-                View Our Menu
-            </a>
+            <button onclick="openOrderModal()" class="inline-flex items-center space-x-2 bg-green-600 text-white text-lg px-8 py-4 rounded-full font-bold hover:bg-green-700 transition shadow-lg">
+                <i class="fa-brands fa-whatsapp text-2xl"></i>
+                <span>Create WhatsApp Order</span>
+            </button>
         </div>
     </div>
 
@@ -62,73 +66,22 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-center text-brand-dark mb-12 border-b-2 border-brand-accent pb-2 inline-block relative left-1/2 -translate-x-1/2">Daily Menu Highlights</h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-                    <div class="bg-brand-dark text-white py-3 text-center font-bold text-lg">North Indian Thali Basics</div>
-                    <ul class="p-6 space-y-4">
-                        <li class="flex justify-between items-center border-b border-gray-100 pb-2">
-                            <span>Paneer Butter Masala</span> <span class="font-semibold text-brand-accent">₹180</span>
-                        </li>
-                        <li class="flex justify-between items-center border-b border-gray-100 pb-2">
-                            <span>Dal Makhani</span> <span class="font-semibold text-brand-accent">₹140</span>
-                        </li>
-                        <li class="flex justify-between items-center border-b border-gray-100 pb-2">
-                            <span>Seasonal Mixed Veg</span> <span class="font-semibold text-brand-accent">₹120</span>
-                        </li>
-                        <li class="flex justify-between items-center">
-                            <span>Tandoori Roti / Butter Naan</span> <span class="font-semibold text-brand-accent">₹15 / ₹35</span>
-                        </li>
-                    </ul>
+            <div id="static-menu-container" class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                 </div>
-
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-                    <div class="bg-green-600 text-white py-3 text-center font-bold text-lg">Healthy Salads</div>
-                    <ul class="p-6 space-y-4">
-                        <li class="flex justify-between items-center border-b border-gray-100 pb-2">
-                            <span>Fresh Garden Salad</span> <span class="font-semibold text-brand-accent">₹80</span>
-                        </li>
-                        <li class="flex justify-between items-center border-b border-gray-100 pb-2">
-                            <span>Sprouted Moong & Chana</span> <span class="font-semibold text-brand-accent">₹95</span>
-                        </li>
-                        <li class="flex justify-between items-center border-b border-gray-100 pb-2">
-                            <span>Protein Paneer Salad</span> <span class="font-semibold text-brand-accent">₹120</span>
-                        </li>
-                        <li class="flex justify-between items-center">
-                            <span>Fruit Bowl (Seasonal)</span> <span class="font-semibold text-brand-accent">₹110</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-                    <div class="bg-yellow-500 text-white py-3 text-center font-bold text-lg">Quick Bites & Fast Food</div>
-                    <ul class="p-6 space-y-4">
-                        <li class="flex justify-between items-center border-b border-gray-100 pb-2">
-                            <span>Aloo Tikki Burger</span> <span class="font-semibold text-brand-accent">₹60</span>
-                        </li>
-                        <li class="flex justify-between items-center border-b border-gray-100 pb-2">
-                            <span>Veg Grilled Sandwich</span> <span class="font-semibold text-brand-accent">₹80</span>
-                        </li>
-                        <li class="flex justify-between items-center border-b border-gray-100 pb-2">
-                            <span>Chilli Paneer Dry</span> <span class="font-semibold text-brand-accent">₹150</span>
-                        </li>
-                        <li class="flex justify-between items-center">
-                            <span>Veg Hakka Noodles</span> <span class="font-semibold text-brand-accent">₹110</span>
-                        </li>
-                    </ul>
-                </div>
+            
+            <div class="text-center">
+                <button onclick="openOrderModal()" class="bg-brand-dark text-white text-lg px-8 py-3 rounded-full hover:bg-blue-900 transition shadow-md">
+                    Select Items & Order Now
+                </button>
             </div>
-            <p class="text-center text-gray-500 text-sm mt-8">* Custom corporate meal plans and bulk discounts available on request.</p>
         </div>
     </section>
 
     <section id="contact" class="py-16 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-brand-light rounded-2xl p-8 shadow-inner flex flex-col md:flex-row items-center justify-between">
-                
                 <div class="mb-8 md:mb-0 md:w-1/2">
                     <h2 class="text-3xl font-bold text-brand-dark mb-4">Get in Touch</h2>
-                    <p class="text-gray-700 mb-6">Ready to upgrade your office cafeteria? Contact Deepak Kumar today to discuss menus, pricing, and daily delivery schedules.</p>
-                    
                     <div class="space-y-4">
                         <div class="flex items-center text-gray-800">
                             <i class="fa-solid fa-user text-brand-accent w-6"></i>
@@ -146,15 +99,10 @@
                             <i class="fa-solid fa-envelope text-brand-accent w-6"></i>
                             <a href="mailto:deepakkumar964379@gmail.com" class="hover:text-brand-accent transition">deepakkumar964379@gmail.com</a>
                         </div>
-                        <div class="flex items-center text-gray-800">
-                            <i class="fa-solid fa-location-dot text-brand-accent w-6"></i>
-                            <span>Sector-62, Noida</span>
-                        </div>
                     </div>
                 </div>
-
                 <div class="md:w-1/3 flex justify-center">
-                    <div class="w-48 h-48 bg-white rounded-full flex items-center justify-center shadow-lg border-4 border-brand-accent overflow-hidden">
+                    <div class="w-48 h-48 bg-white rounded-full flex items-center justify-center shadow-lg border-4 border-brand-accent">
                         <i class="fa-solid fa-utensils text-6xl text-gray-300"></i>
                     </div>
                 </div>
@@ -166,5 +114,228 @@
         <p>&copy; 2026 Accent On Health Food Catering Service. All rights reserved.</p>
     </footer>
 
+    <div id="interactive-order-modal" class="fixed inset-0 bg-gray-900 bg-opacity-95 z-50 hidden flex-col justify-end sm:justify-center items-center sm:p-4 transition-opacity">
+        <div class="bg-gray-50 w-full sm:max-w-2xl sm:rounded-2xl shadow-2xl flex flex-col h-[90vh] sm:h-[85vh] animate-slide-up sm:animate-none">
+            
+            <div class="bg-brand-dark text-white px-6 py-4 flex justify-between items-center sm:rounded-t-2xl shrink-0">
+                <div>
+                    <h2 class="text-2xl font-bold">Build Your Order</h2>
+                    <p class="text-brand-light text-sm">Add items to your cart</p>
+                </div>
+                <button onclick="closeOrderModal()" class="text-gray-300 hover:text-white transition bg-brand-dark/50 p-2 rounded-full">
+                    <i class="fa-solid fa-xmark text-2xl"></i>
+                </button>
+            </div>
+            
+            <div class="p-4 sm:p-6 overflow-y-auto flex-grow" id="interactive-menu-container">
+            </div>
+
+            <div class="bg-white p-4 sm:p-6 border-t border-gray-200 shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)] sm:rounded-b-2xl shrink-0">
+                <div class="flex justify-between items-center mb-4">
+                    <div>
+                        <span class="text-gray-500 text-sm">Total Amount</span>
+                        <div class="text-2xl font-extrabold text-brand-dark">₹<span id="live-total">0</span></div>
+                    </div>
+                    <div class="text-sm font-semibold text-gray-600 bg-gray-100 px-3 py-1 rounded-full">
+                        <span id="live-items-count">0</span> items
+                    </div>
+                </div>
+                <button onclick="sendWhatsAppOrder()" id="whatsapp-submit-btn" class="w-full bg-green-500 text-white py-4 rounded-xl font-bold text-lg hover:bg-green-600 transition flex justify-center items-center space-x-2 shadow-md opacity-50 cursor-not-allowed" disabled>
+                    <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    <span>Send to WhatsApp</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const menuData = [
+            {
+                category: "Main Course",
+                colorClass: "bg-brand-dark",
+                items: [
+                    { id: "m1", name: "Dal Makhani", price: 140 },
+                    { id: "m2", name: "Matar Paneer", price: 160 },
+                    { id: "m3", name: "Nutri Aloo Dry", price: 110 }
+                ]
+            },
+            {
+                category: "Breads & Rice",
+                colorClass: "bg-green-600",
+                items: [
+                    { id: "b1", name: "Plain Rice", price: 70 },
+                    { id: "b2", name: "Chapati", price: 15 }
+                ]
+            },
+            {
+                category: "Accompaniments & Dessert",
+                colorClass: "bg-yellow-500",
+                items: [
+                    { id: "a1", name: "Kachumber Salad", price: 60 },
+                    { id: "a2", name: "Lauki Raita", price: 60 },
+                    { id: "a3", name: "Gulab Jamun (2 pcs)", price: 50 }
+                ]
+            }
+        ];
+
+        let cart = {}; 
+        const vendorPhone = "919643797932"; 
+
+        function openOrderModal() {
+            renderInteractiveMenu(); 
+            updateLiveTotals(); 
+            document.getElementById('interactive-order-modal').classList.remove('hidden');
+            document.getElementById('interactive-order-modal').classList.add('flex');
+            document.body.style.overflow = 'hidden'; 
+        }
+
+        function closeOrderModal() {
+            document.getElementById('interactive-order-modal').classList.add('hidden');
+            document.getElementById('interactive-order-modal').classList.remove('flex');
+            document.body.style.overflow = 'auto'; 
+        }
+
+        function updateCart(itemId, change) {
+            if (!cart[itemId]) cart[itemId] = 0;
+            cart[itemId] += change;
+            
+            if (cart[itemId] <= 0) delete cart[itemId];
+            
+            const qtyElement = document.getElementById(`qty-${itemId}`);
+            if(qtyElement) {
+                qtyElement.innerText = cart[itemId] || 0;
+            }
+            updateLiveTotals();
+        }
+
+        function sendWhatsAppOrder() {
+            let message = "*New Order - Accent On Health* 👨‍🍳\n\n";
+            let totalPrice = 0;
+
+            for (let id in cart) {
+                const item = getItemDetails(id);
+                if (item) {
+                    const qty = cart[id];
+                    message += `▪️ ${qty}x ${item.name} (₹${item.price * qty})\n`;
+                    totalPrice += item.price * qty;
+                }
+            }
+
+            message += `\n*Total Amount: ₹${totalPrice}*\n`;
+            message += `\n_Please deliver to floor/desk: [Type here]_`;
+
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/${vendorPhone}?text=${encodedMessage}`;
+            
+            window.open(whatsappUrl, '_blank');
+            closeOrderModal();
+        }
+
+        function getItemDetails(id) {
+            for (let cat of menuData) {
+                let item = cat.items.find(i => i.id === id);
+                if (item) return item;
+            }
+            return null;
+        }
+
+        function updateLiveTotals() {
+            let totalQty = 0;
+            let totalPrice = 0;
+
+            for (let id in cart) {
+                const item = getItemDetails(id);
+                if (item) {
+                    totalQty += cart[id];
+                    totalPrice += cart[id] * item.price;
+                }
+            }
+
+            document.getElementById('live-total').innerText = totalPrice;
+            document.getElementById('live-items-count').innerText = totalQty;
+
+            const submitBtn = document.getElementById('whatsapp-submit-btn');
+            if (totalQty > 0) {
+                submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+                submitBtn.disabled = false;
+            } else {
+                submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
+                submitBtn.disabled = true;
+            }
+        }
+
+        function renderStaticMenu() {
+            const container = document.getElementById('static-menu-container');
+            if (!container) return;
+
+            let html = '';
+            menuData.forEach(cat => {
+                html += `
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                        <div class="${cat.colorClass} text-white py-3 text-center font-bold text-lg">${cat.category}</div>
+                        <ul class="p-6 space-y-4">
+                `;
+                cat.items.forEach(item => {
+                    html += `
+                        <li class="flex justify-between border-b border-gray-100 pb-2">
+                            <span>${item.name}</span>
+                            <span class="font-semibold text-brand-accent">₹${item.price}</span>
+                        </li>
+                    `;
+                });
+                html += `</ul></div>`;
+            });
+            container.innerHTML = html;
+        }
+
+        function renderInteractiveMenu() {
+            const container = document.getElementById('interactive-menu-container');
+            if (!container) return;
+
+            let html = '';
+            menuData.forEach(cat => {
+                html += `
+                    <div class="mb-6">
+                        <h3 class="text-lg font-bold text-gray-700 mb-3 border-b-2 border-brand-light pb-1">${cat.category}</h3>
+                        <div class="space-y-3">
+                `;
+                cat.items.forEach(item => {
+                    const qty = cart[item.id] || 0;
+                    html += `
+                        <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex justify-between items-center">
+                            <div>
+                                <h4 class="font-bold text-gray-800">${item.name}</h4>
+                                <p class="text-brand-accent font-semibold text-sm">₹${item.price}</p>
+                            </div>
+                            <div class="flex items-center space-x-3 bg-gray-50 rounded-lg p-1 border border-gray-200">
+                                <button onclick="updateCart('${item.id}', -1)" class="w-8 h-8 rounded-md bg-white text-brand-dark shadow-sm hover:bg-gray-200 flex justify-center items-center font-bold">
+                                    <i class="fa-solid fa-minus text-sm"></i>
+                                </button>
+                                <span class="w-5 text-center font-bold text-gray-800" id="qty-${item.id}">${qty}</span>
+                                <button onclick="updateCart('${item.id}', 1)" class="w-8 h-8 rounded-md bg-white text-brand-dark shadow-sm hover:bg-gray-200 flex justify-center items-center font-bold">
+                                    <i class="fa-solid fa-plus text-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                });
+                html += `</div></div>`;
+            });
+            container.innerHTML = html;
+        }
+
+        // Execute immediately since the script is at the bottom of the body
+        renderStaticMenu();
+    </script>
+    
+    <style>
+        @keyframes slideUp {
+            from { transform: translateY(100%); }
+            to { transform: translateY(0); }
+        }
+        .animate-slide-up {
+            animation: slideUp 0.3s ease-out forwards;
+        }
+    </style>
 </body>
 </html>
